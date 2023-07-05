@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@types/node": "^20.3.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2"
   }
 }

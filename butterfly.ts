@@ -1,6 +1,6 @@
 import students from './students.json'
 import {Student} from './interfaces';
-import {shuffle} from './utils/utils';
+import {shuffle, createRandomStudentsFile} from './utils/utils';
 
 function createClassList(): string[] {
     try{
@@ -59,3 +59,4 @@ function splitStudents(classList: string[], students: Student[]) {
 }
 
 // console.log(splitStudents(createClassList(), students))
+createRandomStudentsFile(15, 3)
