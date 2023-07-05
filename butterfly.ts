@@ -1,5 +1,5 @@
 import students from './students.json'
-import {Student} from './interfaces';
+import {Student} from './utils/interfaces';
 import {shuffle, createRandomStudentsFile} from './utils/utils';
 
 function createClassList(): string[] {

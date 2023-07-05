@@ -1,4 +1,4 @@
-import {Student} from '../interfaces'
+import {Student} from './interfaces'
 import {faker} from '@faker-js/faker'
 import fs from 'fs'
 
