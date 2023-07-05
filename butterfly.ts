@@ -1,10 +1,6 @@
-const students = require('./students.json');
-const {shuffleStudents} = require('./utils/utils');
-
-interface Student {
-    name: string;
-    class: string;
-}
+import students from './students.json'
+import {Student} from './interfaces';
+import {shuffle} from './utils/utils';
 
 function createClassList(): string[] {
     try{
@@ -42,7 +38,7 @@ function splitStudents(classList: string[], students: Student[]) {
         const divideStudentsByClassCount: number = Math.floor((students.length / classList.length) + 1)
         const splittedStudentsParent = [];
     
-        const shuffledStudents = shuffleStudents(students);
+        const shuffledStudents = shuffle(students);
     
         for (let i = 0; i < students.length; i += divideStudentsByClassCount) {
             const splittedStudentsChild: Student[] = shuffledStudents.slice(i, i + divideStudentsByClassCount);
@@ -62,4 +58,4 @@ function splitStudents(classList: string[], students: Student[]) {
     }
 }
 
-console.log(splitStudents(createClassList(), students))
+// console.log(splitStudents(createClassList(), students))

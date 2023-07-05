@@ -1,3 +1,5 @@
+import fs from 'fs'
+
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
 
@@ -12,6 +14,17 @@ function shuffle(array) {
   return array;
 }
 
-module.exports = {
-  shuffleStudents: shuffle
+function createRandomStudentsFile(studentQuantity: number) {
+  const students: [] = [];
+
+  // for(let i = 0; i<studentQuantity; i++) {
+  //   const student: Student = {
+
+  //   }
+  // }
+}
+
+export {
+  shuffle,
+  createRandomStudentsFile
 }
